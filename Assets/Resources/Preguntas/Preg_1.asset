@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349473256e04bc5468b94c188fd25565, type: 3}
   m_Name: Preg_1
   m_EditorClassIdentifier: 
-  _info: 2+2=?
+  _info: "\xBFCu\xE1nto es 2+2?"
   _answers:
-  - _info: 
+  - _info: a)    7
     _isCorrect: 0
-  - _info: 
+  - _info: b)    4
+    _isCorrect: 1
+  - _info: c)    3
     _isCorrect: 0
-  - _info: 
-    _isCorrect: 0
-  - _info: 
+  - _info: d)    8
     _isCorrect: 0
   _useTimer: 1
   _timer: 180

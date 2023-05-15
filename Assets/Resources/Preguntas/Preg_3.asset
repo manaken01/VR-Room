@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 349473256e04bc5468b94c188fd25565, type: 3}
-  m_Name: Preg_2
+  m_Name: Preg_3
   m_EditorClassIdentifier: 
-  _info: "\xBFCu\xE1nto es 2+7?"
+  _info: "\xBFCu\xE1nto es z?"
   _answers:
-  - _info: a)    8
+  - _info: a)    7
     _isCorrect: 0
-  - _info: b)    2
-    _isCorrect: 0
-  - _info: c)    5
-    _isCorrect: 0
-  - _info: d)    9
+  - _info: b)    4
     _isCorrect: 1
+  - _info: c)    3
+    _isCorrect: 0
+  - _info: d)    8
+    _isCorrect: 0
   _useTimer: 1
   _timer: 180
   _answerType: 1

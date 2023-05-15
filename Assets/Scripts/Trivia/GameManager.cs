@@ -10,20 +10,58 @@ public class GameManager : MonoBehaviour {
     Question[] _questions = null;
     public Question[] Questions {get { return _questions;}}
 
+
     [SerializeField] GameEvents events = null;
 
     private List<AnswerData> PickedAnswers = new List<AnswerData>();
     private List<int> FinishedQuestions = new List<int>();
     private int currentQuestion = 0;
+
+    private             IEnumerator         IE_WaitTillNextRound    = null;
+   // private             IEnumerator         IE_StartTimer           = null;
     
     void Start (){ //inicio
         LoadQuestions();
+
+
+        var seed = UnityEngine.Random.Range(int.MinValue, int.MaxValue); 
+        UnityEngine.Random.InitState(seed);
 
         foreach (var question in Questions){
                 Debug.Log(question.Info);
         }
 
-        //Display();
+        Display();
+    }
+
+    public void UpdateAnswers(AnswerData newAnswer)
+    {
+        PickedAnswers.Clear();
+        PickedAnswers.Add(newAnswer);
+        // if (Questions[currentQuestion].GetAnswerType == Question.AnswerType.Single)
+        // {
+        //     foreach (var answer in PickedAnswers)
+        //     {
+        //         if (answer != newAnswer)
+        //         {
+        //             answer.Reset();
+        //         }
+        //     }
+        //     PickedAnswers.Clear();
+        //     PickedAnswers.Add(newAnswer);
+        // }
+        // else
+        // {
+        //     bool alreadyPicked = PickedAnswers.Exists(x => x == newAnswer);
+        //     if (alreadyPicked)
+        //     {
+        //         PickedAnswers.Remove(newAnswer);
+        //     }
+        //     else
+        //     {
+        //         PickedAnswers.Add(newAnswer);
+        //     }
+        // }
     }
 
     public void EraseAnswers(){ //Borrar pregunta
@@ -32,7 +70,7 @@ public class GameManager : MonoBehaviour {
 
     void Display() //Pantalla
     {
-        EraseAnswers();
+        //EraseAnswers();
         var question = GetRandomQuestion();
 
         if (events.UpdateQuestionUI != null)
@@ -42,6 +80,26 @@ public class GameManager : MonoBehaviour {
             Debug.LogWarning("Ups error");
         }
 
+    }
+
+    public void Accept(){
+        bool isCorrect = CheckAnswers();
+        FinishedQuestions.Add(currentQuestion);
+
+        UpdateScore((isCorrect) ? Questions[currentQuestion].AddScore : -Questions[currentQuestion].AddScore);
+
+        if (IE_WaitTillNextRound != null)
+        {
+            StopCoroutine(IE_WaitTillNextRound);
+        }
+        IE_WaitTillNextRound = WaitTillNextRound();
+        StartCoroutine(IE_WaitTillNextRound);
+
+    }
+    
+    IEnumerator WaitTillNextRound(){
+        yield return new WaitForSeconds(GameUtility.ResolutionDelayTime);
+        Display();
     }
 
     Question GetRandomQuestion (){ //Sacar pregunta Random
@@ -61,6 +119,30 @@ public class GameManager : MonoBehaviour {
         return random;
     }
 
+    bool CheckAnswers()
+    {
+        if (!CompareAnswers())
+        {
+            return false;
+        }
+        return true;
+    }
+    
+    bool CompareAnswers()
+    {
+        if (PickedAnswers.Count > 0)
+        {
+            List<int> c = Questions[currentQuestion].GetCorrectAnswers();
+            List<int> p = PickedAnswers.Select(x => x.AnswerIndex).ToList();
+
+            var f = c.Except(p).ToList();
+            var s = p.Except(c).ToList();
+
+            return !f.Any() && !s.Any();
+        }
+        return false;
+    }
+
     void LoadQuestions() //Cargar preguntas
     {
         Object[] objs = Resources.LoadAll("Preguntas", typeof(Question));
@@ -70,4 +152,13 @@ public class GameManager : MonoBehaviour {
             _questions[i] = (Question)objs[i];
         }
     }
+
+    private void UpdateScore (int add){
+        events.CurrentFinalScore += add;
+        if (events.ScoreUpdated != null){
+
+            events.ScoreUpdated();
+        }
+    }
+
 }
