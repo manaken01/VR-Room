@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class deteccionProbeta: MonoBehaviour
+public class deteccionLibro: MonoBehaviour
 {
     public AudioSource source;
     public AudioClip clip;
@@ -11,13 +11,13 @@ public class deteccionProbeta: MonoBehaviour
     {   
         Vector3 localPos;
         // When target is hit
-        if(objeto.gameObject.name == "probeta")
+        if(objeto.gameObject.name == "libro")
         {
             source.PlayOneShot(clip);
             Debug.Log("Target was Hit!");
             Destroy(objeto);
         }
-        else if(objeto.gameObject.name == "atomo" || objeto.gameObject.name == "libro")
+        else if(objeto.gameObject.name == "atomo" || objeto.gameObject.name == "probeta")
         {
             source.PlayOneShot(clip2);
             Debug.Log("Mal");

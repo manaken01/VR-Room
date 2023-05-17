@@ -17,7 +17,7 @@ public class deteccionAtomo : MonoBehaviour
             Debug.Log("Target was Hit!");
             Destroy(objeto);
         }
-        else if(objeto.gameObject.name == "probeta")
+        else if(objeto.gameObject.name == "probeta" || objeto.gameObject.name == "libro")
         {
             source.PlayOneShot(clip2);
             Debug.Log("Mal");
