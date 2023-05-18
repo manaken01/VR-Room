@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18367434, g: 0.22913356, b: 0.3050484, a: 1}
+  m_IndirectSpecularColor: {r: 0.18367419, g: 0.22913319, b: 0.3050476, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5214,7 +5214,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1228228384
 PrefabInstance:
@@ -6890,7 +6890,7 @@ Transform:
   - {fileID: 2013526674}
   - {fileID: 1441103019}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1618871217
 PrefabInstance:
@@ -7320,7 +7320,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1658696781
 PrefabInstance:
@@ -7841,7 +7841,7 @@ PrefabInstance:
     - target: {fileID: 6465025859618470960, guid: 21fcd7c0ce500394282b3d07d4aff8a4,
         type: 3}
       propertyPath: m_Name
-      value: Room_Traditional Variant 1 (1)
+      value: Cuarto
       objectReference: {fileID: 0}
     - target: {fileID: 6713518483333018366, guid: 21fcd7c0ce500394282b3d07d4aff8a4,
         type: 3}
@@ -8614,7 +8614,7 @@ Transform:
   - {fileID: 861687139}
   - {fileID: 1741304951}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1963637929
 GameObject:
@@ -8729,7 +8729,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1990076170
 GameObject:
