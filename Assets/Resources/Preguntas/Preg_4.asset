@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349473256e04bc5468b94c188fd25565, type: 3}
   m_Name: Preg_4
   m_EditorClassIdentifier: 
-  _info: "\xBFCu\xE1nto es 4?"
+  _info: "\xBFCu\xE1nto es 12/3?"
   _answers:
   - _info: a)    7
     _isCorrect: 0

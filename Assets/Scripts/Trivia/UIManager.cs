@@ -68,7 +68,7 @@ public struct UIElements
 
 public class UIManager : MonoBehaviour
 {
-    public GameManager Manager;
+    //public GameManager Manager;
 
     public enum ResolutionScreenType {Correct, Incorrect, Final} //no hay final display
 

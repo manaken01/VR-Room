@@ -18,7 +18,7 @@ public class GameEvents : ScriptableObject
     public delegate void ScoreUpdatedCallBack();
     public ScoreUpdatedCallBack ScoreUpdated;
 
-    [HideInInspector]
+    //[HideInInspector]
     public int CurrentFinalScore;
 
     // [HideInInspector]
