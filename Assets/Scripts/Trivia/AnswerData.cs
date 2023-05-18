@@ -7,13 +7,15 @@ using TMPro;
 
 public class AnswerData : MonoBehaviour //Claserespuesta que solo contiene el index
 {
+    //public GameObject Manager;
     [Header("UI Elements")]
     [SerializeField] TextMeshProUGUI infoTextObject;
-    // [SerializeField] Image toggle;
+    //[SerializeField] Button ButtonAnswer;
+    [SerializeField] Image toggle;
 
-    // [Header("Textures")]
-    // [SerializeField] Sprite uncheckedToggle;
-    // [SerializeField] Sprite checkedToggle;
+    [Header("Textures")]
+    [SerializeField] Sprite uncheckedToggle;
+    [SerializeField] Sprite checkedToggle;
 
     [Header("References")]
     [SerializeField] GameEvents events;
@@ -23,16 +25,13 @@ public class AnswerData : MonoBehaviour //Claserespuesta que solo contiene el in
         get{
             if (_rect == null){
                 _rect = GetComponent<RectTransform>() ?? gameObject.AddComponent<RectTransform>();
-            }
-            return _rect;
+            }            return _rect;
         }
     }
 
     private int _answerIndex = -1;
     public int AnswerIndex{get { return _answerIndex;}}
-    
-
-    //private bool Checked = false;
+    private bool Checked = false;
 
 
     public void UpdateData(string info, int index){
@@ -41,21 +40,25 @@ public class AnswerData : MonoBehaviour //Claserespuesta que solo contiene el in
 
     }
 
-    
-    // public void Reset(){
-    //     Checked = false;
-    //     updateUI();
-    // }
-    // public void SwitchState(){
-    //     Checked = !Checked;
-    //     updateUI();
+    public void Reset ()
+    {
+        Checked = false;
+        UpdateUI();
+    }
+    public void SwitchState ()
+    {
+        Checked = !Checked;
+        UpdateUI();
 
-    //     if (events.UpdateQuestionAnswer != null){
-    //         events.UpdateQuestionAnswer(this);
+        if (events.UpdateQuestionAnswer != null)
+        {
+            events.UpdateQuestionAnswer(this);
+        }
+    }
+    void UpdateUI ()
+    {
+        if (toggle == null) return;
 
-    //     }
-    // }
-    // void updateUI(){
-    //     toggle.sprite = (Checked) ? checkedToggle : uncheckedToggle;  
-    // }
+        toggle.sprite = (Checked) ? checkedToggle : uncheckedToggle;
+    }
 }

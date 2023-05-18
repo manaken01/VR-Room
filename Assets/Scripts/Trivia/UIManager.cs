@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using System;
 using TMPro;
 
+
+
 [Serializable()]
 public struct UIMAnagerParameters{
     [Header("Answers options")]
@@ -18,6 +20,9 @@ public struct UIMAnagerParameters{
 
     [SerializeField] Color incorrectBGC;
     public Color IncorrectBGC {get{return incorrectBGC;}}
+
+    [SerializeField] Color finalBGColor;
+    public Color FinalBGColor { get { return finalBGColor; } }
 }
 
 [Serializable()]
@@ -41,8 +46,8 @@ public struct UIElements
     [SerializeField] Image resolutionBG;
     public Image ResolutionBG {get{return resolutionBG;}}
 
-    [SerializeField] TextMeshProUGUI screenText; 
-    public TextMeshProUGUI ScreenText {get{return screenText;}}
+    [SerializeField] TextMeshProUGUI resolutionStateInfoText;
+    public TextMeshProUGUI ResolutionStateInfoText { get { return resolutionStateInfoText; } }
 
     [SerializeField] TextMeshProUGUI imageScoreText; 
     public TextMeshProUGUI ImageScoreText {get{return imageScoreText;}}
@@ -56,14 +61,16 @@ public struct UIElements
     [SerializeField] CanvasGroup mainCanvasGroup;
     public CanvasGroup MainCanvasGroup {get{return mainCanvasGroup;}}
 
-    // [SerializeField] RectTransform finishUiElements; //no se usa
-    // public RectTransform FinishUiElements {get{return finishUiElements;}}
+    [SerializeField] RectTransform finishUiElements; //no se usa
+    public RectTransform FinishUIElements {get{return finishUiElements;}}
 
 }
 
 public class UIManager : MonoBehaviour
 {
-    public enum ResolutionScreenType {Correct, Incorrect} //no hay final display
+    public GameManager Manager;
+
+    public enum ResolutionScreenType {Correct, Incorrect, Final} //no hay final display
 
     [Header("References")]
     [SerializeField] GameEvents events;
@@ -71,7 +78,7 @@ public class UIManager : MonoBehaviour
     [Header("UI Elements (Prefabs)")]
     [SerializeField] AnswerData answerPrefab;
 
-    [SerializeField] UIElements uiElements;
+    [SerializeField] UIElements uIElements;
 
     [Space]
 
@@ -80,61 +87,110 @@ public class UIManager : MonoBehaviour
     List<AnswerData> currentAnswers = new List<AnswerData>(); 
     private int resStateParaHash = 0;
 
+    private IEnumerator  IE_DisplayTimedResolution    = null;
+
 
     void OnEnable (){
-        events.UpdateQuestionUI += UpdateQuestionUI;
+        events.UpdateQuestionUI         += UpdateQuestionUI;
+        events.DisplayScreen  += DisplayResolution;
+        events.ScoreUpdated             += UpdateScoreUI;
     }
 
     void OnDisable (){
-        events.UpdateQuestionUI -= UpdateQuestionUI;
+        events.UpdateQuestionUI         -= UpdateQuestionUI;
+        events.DisplayScreen  -= DisplayResolution;
+        events.ScoreUpdated             -= UpdateScoreUI;
     }
     
     void Start(){
         resStateParaHash = Animator.StringToHash("ScreenState");
     }
     void UpdateQuestionUI(Question question){
-        uiElements.QuestioninfoTextObject.text = question.Info;
+        uIElements.QuestioninfoTextObject.text = question.Info;
         CreateAnswers(question);
     }
 
     void DisplayResolution(ResolutionScreenType type, int score){
-        
+        UpdateSUI(type, score);
+        uIElements.ResolutionScreenAnim.SetInteger(resStateParaHash, 2);
+        uIElements.MainCanvasGroup.blocksRaycasts = false;
+
+        if (type != ResolutionScreenType.Final)
+        {
+            if (IE_DisplayTimedResolution != null)
+            {
+                StopCoroutine(IE_DisplayTimedResolution);
+            }
+            IE_DisplayTimedResolution = DisplayTimedResolution();
+            StartCoroutine(IE_DisplayTimedResolution);
+        }
+    }
+
+    IEnumerator DisplayTimedResolution()
+    {
+        yield return new WaitForSeconds(GameUtility.ResolutionDelayTime);
+        uIElements.ResolutionScreenAnim.SetInteger(resStateParaHash, 1);
+        uIElements.MainCanvasGroup.blocksRaycasts = true;
     }
 
     void UpdateSUI(ResolutionScreenType type, int score){
         switch (type)
         {
             case ResolutionScreenType.Correct:
-                uiElements.ResolutionBG.color = parameters.CorrectBGC;
-                uiElements.ScreenText.text = "¡Correcto!";
-                uiElements.ImageScoreText.text = "+"+ score;
+                uIElements.ResolutionBG.color = parameters.CorrectBGC;
+                uIElements.ResolutionStateInfoText.text = "¡Correcto!";
+                uIElements.ImageScoreText.text = "+"+ score;
                 break;
             case ResolutionScreenType.Incorrect:
-                uiElements.ResolutionBG.color = parameters.IncorrectBGC;
-                uiElements.ScreenText.text = "¡Incorrecto!";
-                uiElements.ImageScoreText.text = "-"+ score;
+                uIElements.ResolutionBG.color = parameters.IncorrectBGC;
+                uIElements.ResolutionStateInfoText.text = "¡Incorrecto!";
+                uIElements.ImageScoreText.text = "-"+ score;
                 break;  //26
-        }
-    }
+            case ResolutionScreenType.Final:
+                uIElements.ResolutionBG.color = parameters.FinalBGColor;
+                uIElements.ResolutionStateInfoText.text = "Fallaste";
 
+                uIElements.FinishUIElements.gameObject.SetActive(true);
+                break;
+        }   
+    }
+  
     void CreateAnswers(Question question){
         EraseAnswers();
 
         float offset = 0 - parameters.Margins;
 
+        
+        
+        
+        
         for (int i = 0; i < question.Answers.Length; i++){
-            AnswerData newAnswer = (AnswerData)Instantiate(answerPrefab, uiElements.AnswerContentArea); 
+            
+            AnswerData newAnswer = (AnswerData)Instantiate(answerPrefab, uIElements.AnswerContentArea); 
+
+            
+            
+
             newAnswer.UpdateData(question.Answers[i].Info, i);
 
             newAnswer.Rect.anchoredPosition = new Vector2(0, offset);
 
             offset -= (newAnswer.Rect.sizeDelta.y + parameters.Margins);
 
-            uiElements.AnswerContentArea.sizeDelta = new Vector2(uiElements.AnswerContentArea.sizeDelta.x, offset * - 1);
+           
+            
+            uIElements.AnswerContentArea.sizeDelta = new Vector2(uIElements.AnswerContentArea.sizeDelta.x, offset * - 1);
 
             currentAnswers.Add(newAnswer);
+
+            
+            
+            //newAnswer.ButtonAnswer.onClick.AddListener(() => Manager.Accept());
+
         }
-    }
+
+    }   
+
 
     void EraseAnswers(){
         foreach(var answer in currentAnswers){
@@ -143,4 +199,9 @@ public class UIManager : MonoBehaviour
         currentAnswers.Clear();
     }
     
+    
+    void UpdateScoreUI()
+    {
+        uIElements.ScoreText.text = "Score: " + events.CurrentFinalScore;
+    }
 }

@@ -270,5 +270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a9f63ecdcfea418504431111ff569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Manager: {fileID: 0}
   infoTextObject: {fileID: 3813716232821375159}
   events: {fileID: 11400000, guid: abd73edc1413a5248b8f83bd2d897193, type: 2}

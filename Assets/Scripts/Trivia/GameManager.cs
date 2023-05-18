@@ -18,7 +18,25 @@ public class GameManager : MonoBehaviour {
     private int currentQuestion = 0;
 
     private             IEnumerator         IE_WaitTillNextRound    = null;
-   // private             IEnumerator         IE_StartTimer           = null;
+    // private             IEnumerator         IE_StartTimer           = null;
+
+    private             bool                IsFinished
+    {
+        get
+        {
+            return (FinishedQuestions.Count < Questions.Length) ? false : true;
+        }
+    }
+
+    void OnEnable()
+    {
+        events.UpdateQuestionAnswer += UpdateAnswers;
+    }
+
+    void OnDisable()
+    {
+        events.UpdateQuestionAnswer -= UpdateAnswers;
+    }
     
     void Start (){ //inicio
         LoadQuestions();
@@ -36,32 +54,30 @@ public class GameManager : MonoBehaviour {
 
     public void UpdateAnswers(AnswerData newAnswer)
     {
-        PickedAnswers.Clear();
-        PickedAnswers.Add(newAnswer);
-        // if (Questions[currentQuestion].GetAnswerType == Question.AnswerType.Single)
-        // {
-        //     foreach (var answer in PickedAnswers)
-        //     {
-        //         if (answer != newAnswer)
-        //         {
-        //             answer.Reset();
-        //         }
-        //     }
-        //     PickedAnswers.Clear();
-        //     PickedAnswers.Add(newAnswer);
-        // }
-        // else
-        // {
-        //     bool alreadyPicked = PickedAnswers.Exists(x => x == newAnswer);
-        //     if (alreadyPicked)
-        //     {
-        //         PickedAnswers.Remove(newAnswer);
-        //     }
-        //     else
-        //     {
-        //         PickedAnswers.Add(newAnswer);
-        //     }
-        // }
+         if (Questions[currentQuestion].GetAnswerType == Question.AnswerType.Single)
+        {
+            foreach (var answer in PickedAnswers)
+            {
+                if (answer != newAnswer)
+                {
+                    answer.Reset();
+                }
+            }
+            PickedAnswers.Clear();
+            PickedAnswers.Add(newAnswer);
+        }
+        else
+        {
+            bool alreadyPicked = PickedAnswers.Exists(x => x == newAnswer);
+            if (alreadyPicked)
+            {
+                PickedAnswers.Remove(newAnswer);
+            }
+            else
+            {
+                PickedAnswers.Add(newAnswer);
+            }
+        }
     }
 
     public void EraseAnswers(){ //Borrar pregunta
@@ -70,7 +86,7 @@ public class GameManager : MonoBehaviour {
 
     void Display() //Pantalla
     {
-        //EraseAnswers();
+        EraseAnswers();
         var question = GetRandomQuestion();
 
         if (events.UpdateQuestionUI != null)
@@ -86,14 +102,34 @@ public class GameManager : MonoBehaviour {
         bool isCorrect = CheckAnswers();
         FinishedQuestions.Add(currentQuestion);
 
+        //Agregar si cuando el score es mayor a 500  cambiar de escena
+
         UpdateScore((isCorrect) ? Questions[currentQuestion].AddScore : -Questions[currentQuestion].AddScore);
 
-        if (IE_WaitTillNextRound != null)
+        // if (score<0)
+        // {
+        //     UIManager.ResolutionScreenType.Final;
+        // }
+
+        var type = (IsFinished) ? UIManager.ResolutionScreenType.Final
+            : (isCorrect) ? UIManager.ResolutionScreenType.Correct 
+            : UIManager.ResolutionScreenType.Incorrect;
+
+        
+        if (events.DisplayScreen != null)
         {
-            StopCoroutine(IE_WaitTillNextRound);
+            events.DisplayScreen(type, Questions[currentQuestion].AddScore);
         }
-        IE_WaitTillNextRound = WaitTillNextRound();
-        StartCoroutine(IE_WaitTillNextRound);
+
+        if (type != UIManager.ResolutionScreenType.Final)
+        {
+            if (IE_WaitTillNextRound != null)
+            {
+                StopCoroutine(IE_WaitTillNextRound);
+            }
+            IE_WaitTillNextRound = WaitTillNextRound();
+            StartCoroutine(IE_WaitTillNextRound);
+        }
 
     }
     
@@ -159,6 +195,10 @@ public class GameManager : MonoBehaviour {
 
             events.ScoreUpdated();
         }
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18367434, g: 0.22913356, b: 0.3050484, a: 1}
+  m_IndirectSpecularColor: {r: 0.18367419, g: 0.22913319, b: 0.3050476, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -617,6 +617,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RightHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 56186ccf27ad7864681108ed88349071,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56186ccf27ad7864681108ed88349071, type: 3}
@@ -6917,6 +6922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e93333e2207064083a6661f35c6e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Manager: {fileID: 1633530158}
   events: {fileID: 11400000, guid: abd73edc1413a5248b8f83bd2d897193, type: 2}
   answerPrefab: {fileID: 3813716233287438076, guid: df840cabf31b3db42b06a69473ba71e2,
     type: 3}
@@ -7595,7 +7601,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1741304951
 Transform:
   m_ObjectHideFlags: 0
@@ -7748,7 +7754,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741304950}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
   m_Name: 
@@ -7835,6 +7841,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LeftHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bf7151579c38e2a44be94ba8773876c1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf7151579c38e2a44be94ba8773876c1, type: 3}
@@ -8051,7 +8062,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1896064540
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9175,5 +9186,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3813716233287438076, guid: df840cabf31b3db42b06a69473ba71e2,
+        type: 3}
+      propertyPath: ButtonAnswer
+      value: 
+      objectReference: {fileID: 3813716233758740391}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df840cabf31b3db42b06a69473ba71e2, type: 3}
+--- !u!114 &3813716233758740391 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3813716233287438065, guid: df840cabf31b3db42b06a69473ba71e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 3813716233758740390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
