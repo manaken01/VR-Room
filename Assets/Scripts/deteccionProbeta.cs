@@ -7,6 +7,7 @@ public class deteccionProbeta: MonoBehaviour
     public AudioSource source;
     public AudioClip clip;
     public AudioClip clip2;
+    public detectarBueno prob;
     void OnTriggerEnter(Collider objeto) 
     {   
         Vector3 localPos;
@@ -16,6 +17,7 @@ public class deteccionProbeta: MonoBehaviour
             source.PlayOneShot(clip);
             Debug.Log("Target was Hit!");
             Destroy(objeto);
+            prob.obj2 = true;
         }
         else if(objeto.gameObject.name == "atomo" || objeto.gameObject.name == "libro")
         {
