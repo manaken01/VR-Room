@@ -106,15 +106,15 @@ public class GameManager : MonoBehaviour {
 
         UpdateScore((isCorrect) ? Questions[currentQuestion].AddScore : -Questions[currentQuestion].AddScore);
 
-        // if (score<0)
-        // {
-        //     UIManager.ResolutionScreenType.Final;
-        // }
-
+     
         var type = (IsFinished) ? UIManager.ResolutionScreenType.Final
             : (isCorrect) ? UIManager.ResolutionScreenType.Correct 
             : UIManager.ResolutionScreenType.Incorrect;
 
+        if (events.CurrentFinalScore < 0)
+        {
+            type = UIManager.ResolutionScreenType.Final;
+        }
         
         if (events.DisplayScreen != null)
         {
@@ -178,7 +178,7 @@ public class GameManager : MonoBehaviour {
         }
         return false;
     }
-
+    
     void LoadQuestions() //Cargar preguntas
     {
         Object[] objs = Resources.LoadAll("Preguntas", typeof(Question));
