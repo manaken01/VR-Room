@@ -7636,7 +7636,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727955780}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!225 &1727955785
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8231,7 +8231,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!225 &1896064544
 CanvasGroup:
