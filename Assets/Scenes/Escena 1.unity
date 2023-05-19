@@ -7059,9 +7059,9 @@ MonoBehaviour:
     finishUiElements: {fileID: 81492393}
   parameters:
     margins: 0
-    correctBGC: {r: 0, g: 0.9960785, b: 0.1764706, a: 0}
-    incorrectBGC: {r: 0.8773585, g: 0.12829298, b: 0.12829298, a: 0}
-    finalBGColor: {r: 1, g: 0, b: 0, a: 0}
+    correctBGC: {r: 0, g: 0.9960785, b: 0.1764706, a: 1}
+    incorrectBGC: {r: 0.8773585, g: 0.12829298, b: 0.12829298, a: 1}
+    finalBGColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &1633530158
 MonoBehaviour:
   m_ObjectHideFlags: 0
