@@ -13,12 +13,19 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField] GameEvents events = null;
 
+    //[SerializeField]    Animator            timerAnimtor            = null;
+    [SerializeField]    TextMeshProUGUI     timerText               = null;
+    [SerializeField]    Color               timerHalfWayOutColor    = Color.yellow;
+    [SerializeField]    Color               timerAlmostOutColor     = Color.red;
+    private             Color               timerDefaultColor       = Color.white;
+
+
     private List<AnswerData> PickedAnswers = new List<AnswerData>();
     private List<int> FinishedQuestions = new List<int>();
     private int currentQuestion = 0;
 
     private             IEnumerator         IE_WaitTillNextRound    = null;
-    // private             IEnumerator         IE_StartTimer           = null;
+    private             IEnumerator         IE_StartTimer           = null;
 
     private             bool                IsFinished
     {
@@ -37,11 +44,14 @@ public class GameManager : MonoBehaviour {
     {
         events.UpdateQuestionAnswer -= UpdateAnswers;
     }
-    
+    void Awake()
+    {
+        events.CurrentFinalScore = 0;
+    }
     void Start (){ //inicio
         LoadQuestions();
 
-        events.CurrentFinalScore = 0;
+        
         var seed = UnityEngine.Random.Range(int.MinValue, int.MaxValue); 
         UnityEngine.Random.InitState(seed);
 
@@ -95,12 +105,18 @@ public class GameManager : MonoBehaviour {
         }else{
             Debug.LogWarning("Ups error");
         }
+        if (question.UseTimer)
+        {
+            UpdateTimer(question.UseTimer);
+        }
 
     }
 
     public void Accept(){
+        UpdateTimer(false);
         bool isCorrect = CheckAnswers();
         FinishedQuestions.Add(currentQuestion);
+        
 
         //Agregar si cuando el score es mayor a 500  cambiar de escena
 
@@ -132,7 +148,54 @@ public class GameManager : MonoBehaviour {
         }
 
     }
-    
+        
+    void UpdateTimer(bool state)
+    {
+        switch (state)
+        {
+            case true:
+                IE_StartTimer = StartTimer();
+                StartCoroutine(IE_StartTimer);
+
+                //timerAnimtor.SetInteger(timerStateParaHash, 2);
+                break;
+            case false:
+                if (IE_StartTimer != null)
+                {
+                    StopCoroutine(IE_StartTimer);
+                }
+
+                //timerAnimtor.SetInteger(timerStateParaHash, 1);
+                break;
+        }
+    }
+    IEnumerator StartTimer()
+    {
+        var totalTime = Questions[currentQuestion].Timer;
+        var timeLeft = totalTime;
+
+        timerText.color = timerDefaultColor;
+        while (timeLeft > 0)
+        {
+            timeLeft--;
+
+            //AudioManager.Instance.PlaySound("CountdownSFX");
+
+            if (timeLeft < totalTime / 2 && timeLeft > totalTime / 4)
+            {
+                timerText.color = timerHalfWayOutColor;
+            }
+            if (timeLeft < totalTime / 4)
+            {
+                timerText.color = timerAlmostOutColor;
+            }
+
+            timerText.text = timeLeft.ToString();
+            yield return new WaitForSeconds(1.0f);
+        }
+        Accept();
+    }
+
     IEnumerator WaitTillNextRound(){
         yield return new WaitForSeconds(GameUtility.ResolutionDelayTime);
         Display();

@@ -3613,8 +3613,9 @@ GameObject:
   - component: {fileID: 941641962}
   - component: {fileID: 941641964}
   - component: {fileID: 941641963}
+  - component: {fileID: 941641965}
   m_Layer: 0
-  m_Name: Image
+  m_Name: timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3679,6 +3680,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941641961}
   m_CullTransparentMesh: 1
+--- !u!225 &941641965
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941641961}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &944113682
 GameObject:
   m_ObjectHideFlags: 0
@@ -7075,6 +7088,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events: {fileID: 11400000, guid: abd73edc1413a5248b8f83bd2d897193, type: 2}
+  timerText: {fileID: 1053781170}
+  timerHalfWayOutColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  timerAlmostOutColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!4 &1633530159
 Transform:
   m_ObjectHideFlags: 0
@@ -7416,7 +7432,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727955780}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
