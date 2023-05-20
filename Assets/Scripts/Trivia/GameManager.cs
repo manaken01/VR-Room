@@ -122,7 +122,11 @@ public class GameManager : MonoBehaviour {
 
         UpdateScore((isCorrect) ? Questions[currentQuestion].AddScore : -Questions[currentQuestion].AddScore);
 
-     
+        // if (events.CurrentFinalScore >= 500)
+        // {
+        //     SceneManager.LoadScene("Escena 3", LoadSceneMode.Single);
+        // }
+        
         var type = (IsFinished) ? UIManager.ResolutionScreenType.Final
             : (isCorrect) ? UIManager.ResolutionScreenType.Correct 
             : UIManager.ResolutionScreenType.Incorrect;
@@ -136,7 +140,7 @@ public class GameManager : MonoBehaviour {
         {
             events.DisplayScreen(type, Questions[currentQuestion].AddScore);
         }
-
+        AudioManager.Instance.PlaySound((isCorrect) ? "Correcto" : "Incorrecto");
         if (type != UIManager.ResolutionScreenType.Final)
         {
             if (IE_WaitTillNextRound != null)

@@ -150,7 +150,7 @@ public class UIManager : MonoBehaviour
                 break;  //26
             case ResolutionScreenType.Final:
                 uIElements.ResolutionBG.color = parameters.FinalBGColor;
-                uIElements.ResolutionStateInfoText.text = "Fallaste";
+                uIElements.ResolutionStateInfoText.text = "Perdiste";
                 uIElements.ImageScoreText.text = "";
                 uIElements.FinishUIElements.gameObject.SetActive(true);
                 break;
