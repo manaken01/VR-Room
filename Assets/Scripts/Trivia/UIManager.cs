@@ -92,17 +92,18 @@ public class UIManager : MonoBehaviour
 
     void OnEnable (){
         events.UpdateQuestionUI         += UpdateQuestionUI;
-        events.DisplayScreen  += DisplayResolution;
+        events.DisplayScreen            += DisplayResolution;
         events.ScoreUpdated             += UpdateScoreUI;
     }
 
     void OnDisable (){
         events.UpdateQuestionUI         -= UpdateQuestionUI;
-        events.DisplayScreen  -= DisplayResolution;
+        events.DisplayScreen            -= DisplayResolution;
         events.ScoreUpdated             -= UpdateScoreUI;
     }
     
     void Start(){
+        UpdateScoreUI();
         resStateParaHash = Animator.StringToHash("ScreenState");
     }
     void UpdateQuestionUI(Question question){
@@ -137,6 +138,7 @@ public class UIManager : MonoBehaviour
         switch (type)
         {
             case ResolutionScreenType.Correct:
+                
                 uIElements.ResolutionBG.color = parameters.CorrectBGC;
                 uIElements.ResolutionStateInfoText.text = "¡Correcto!";
                 uIElements.ImageScoreText.text = "+"+ score;
@@ -148,8 +150,8 @@ public class UIManager : MonoBehaviour
                 break;  //26
             case ResolutionScreenType.Final:
                 uIElements.ResolutionBG.color = parameters.FinalBGColor;
-                uIElements.ResolutionStateInfoText.text = "Fallaste";
-
+                uIElements.ResolutionStateInfoText.text = "Perdiste";
+                uIElements.ImageScoreText.text = "";
                 uIElements.FinishUIElements.gameObject.SetActive(true);
                 break;
         }   
@@ -202,6 +204,6 @@ public class UIManager : MonoBehaviour
     
     void UpdateScoreUI()
     {
-        uIElements.ScoreText.text = "Score: " + events.CurrentFinalScore;
+        uIElements.ScoreText.text = "Puntos: " + events.CurrentFinalScore;
     }
 }

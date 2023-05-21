@@ -23,6 +23,6 @@ MonoBehaviour:
   - _info: d)    -2462
     _isCorrect: 1
   _useTimer: 1
-  _timer: 180
+  _timer: 10
   _answerType: 1
   _addScore: 100
