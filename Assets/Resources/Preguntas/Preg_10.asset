@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 349473256e04bc5468b94c188fd25565, type: 3}
-  m_Name: Preg_5
+  m_Name: Preg_10
   m_EditorClassIdentifier: 
-  _info: "\xBFCu\xE1nto es 5-2467?"
+  _info: "\xBFCu\xE1nto es 7x9?"
   _answers:
-  - _info: a)    -2472
+  - _info: a)    64
     _isCorrect: 0
-  - _info: b)    2462
+  - _info: b)    70
     _isCorrect: 0
-  - _info: c)    -2466
+  - _info: c)   61
     _isCorrect: 0
-  - _info: d)    -2462
+  - _info: d)   63
     _isCorrect: 1
   _useTimer: 1
   _timer: 15

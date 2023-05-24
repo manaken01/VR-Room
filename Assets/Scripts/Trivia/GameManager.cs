@@ -122,34 +122,37 @@ public class GameManager : MonoBehaviour {
 
         UpdateScore((isCorrect) ? Questions[currentQuestion].AddScore : -Questions[currentQuestion].AddScore);
 
-        // if (events.CurrentFinalScore >= 500)
-        // {
-        //     SceneManager.LoadScene("Escena 3", LoadSceneMode.Single);
-        // }
-        
-        var type = (IsFinished) ? UIManager.ResolutionScreenType.Final
+        if (events.CurrentFinalScore >= 500)
+        {
+            AudioManager.Instance.StopSound("Fondo");
+            SceneManager.LoadScene("Escena 2", LoadSceneMode.Single);
+        }else{
+            var type = (IsFinished) ? UIManager.ResolutionScreenType.Final
             : (isCorrect) ? UIManager.ResolutionScreenType.Correct 
             : UIManager.ResolutionScreenType.Incorrect;
 
-        if (events.CurrentFinalScore < 0)
-        {
-            type = UIManager.ResolutionScreenType.Final;
+            if (events.CurrentFinalScore < 0)
+            {
+                type = UIManager.ResolutionScreenType.Final;
+            }
+            
+            if (events.DisplayScreen != null)
+            {
+                events.DisplayScreen(type, Questions[currentQuestion].AddScore);
+            }
+            AudioManager.Instance.PlaySound((isCorrect) ? "Correcto" : "Incorrecto");
+            if (type != UIManager.ResolutionScreenType.Final)
+            {
+                if (IE_WaitTillNextRound != null)
+                {
+                    StopCoroutine(IE_WaitTillNextRound);
+                }
+                IE_WaitTillNextRound = WaitTillNextRound();
+                StartCoroutine(IE_WaitTillNextRound);
+        }
         }
         
-        if (events.DisplayScreen != null)
-        {
-            events.DisplayScreen(type, Questions[currentQuestion].AddScore);
-        }
-        AudioManager.Instance.PlaySound((isCorrect) ? "Correcto" : "Incorrecto");
-        if (type != UIManager.ResolutionScreenType.Final)
-        {
-            if (IE_WaitTillNextRound != null)
-            {
-                StopCoroutine(IE_WaitTillNextRound);
-            }
-            IE_WaitTillNextRound = WaitTillNextRound();
-            StartCoroutine(IE_WaitTillNextRound);
-        }
+        
 
     }
         

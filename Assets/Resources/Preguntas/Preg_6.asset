@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 349473256e04bc5468b94c188fd25565, type: 3}
-  m_Name: Preg_5
+  m_Name: Preg_6
   m_EditorClassIdentifier: 
-  _info: "\xBFCu\xE1nto es 5-2467?"
+  _info: "\xBFCu\xE1nto es 15/3?"
   _answers:
-  - _info: a)    -2472
-    _isCorrect: 0
-  - _info: b)    2462
-    _isCorrect: 0
-  - _info: c)    -2466
-    _isCorrect: 0
-  - _info: d)    -2462
+  - _info: a)    5
     _isCorrect: 1
+  - _info: b)    7
+    _isCorrect: 0
+  - _info: c)    6
+    _isCorrect: 0
+  - _info: d)    9
+    _isCorrect: 0
   _useTimer: 1
   _timer: 15
   _answerType: 1
