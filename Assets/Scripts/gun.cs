@@ -16,4 +16,5 @@ public class gun : MonoBehaviour
         rig.AddForce(spawnPoint.forward * speed, ForceMode.Impulse);
     }
 
+   
 }
