@@ -20,6 +20,6 @@ public class detectarBueno : MonoBehaviour
 
     IEnumerator cargarScena() {
         yield return new WaitForSeconds(4);
-        SceneManager.LoadScene("Escena 1", LoadSceneMode.Single);
+        SceneManager.LoadScene("Escena 3", LoadSceneMode.Single);
     }
 }
