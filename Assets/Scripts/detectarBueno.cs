@@ -8,6 +8,7 @@ public class detectarBueno : MonoBehaviour
     public bool obj1;
     public bool obj2;
     public bool obj3;
+    public AudioSource audioSource;
 
     // Update is called once per frame
     void Update()
@@ -20,6 +21,7 @@ public class detectarBueno : MonoBehaviour
 
     IEnumerator cargarScena() {
         yield return new WaitForSeconds(4);
+        audioSource.mute = true;
         SceneManager.LoadScene("Escena 3", LoadSceneMode.Single);
     }
 }
