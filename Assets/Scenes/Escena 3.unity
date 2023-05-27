@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18367402, g: 0.22913288, b: 0.30504698, a: 1}
+  m_IndirectSpecularColor: {r: 0.18367434, g: 0.22913356, b: 0.3050484, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -553,7 +553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 121863456}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tachuelas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,6 +653,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: alfiler
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6a1bf9f6a2e17a342b5ef6256e0cc03d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a1bf9f6a2e17a342b5ef6256e0cc03d, type: 3}
@@ -805,7 +810,7 @@ GameObject:
   - component: {fileID: 184295372}
   - component: {fileID: 184295371}
   - component: {fileID: 184295374}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SocketCartago
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -980,6 +985,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: alfiler
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6a1bf9f6a2e17a342b5ef6256e0cc03d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a1bf9f6a2e17a342b5ef6256e0cc03d, type: 3}
@@ -1185,6 +1195,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: alfiler
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6a1bf9f6a2e17a342b5ef6256e0cc03d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a1bf9f6a2e17a342b5ef6256e0cc03d, type: 3}
@@ -1562,7 +1577,7 @@ GameObject:
   - component: {fileID: 383923859}
   - component: {fileID: 383923858}
   - component: {fileID: 383923857}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TachuelaL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3012,7 +3027,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 484818665}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sockets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3053,7 +3068,7 @@ GameObject:
   - component: {fileID: 495585726}
   - component: {fileID: 495585725}
   - component: {fileID: 495585724}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TachuelaH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3287,7 +3302,7 @@ GameObject:
   - component: {fileID: 535710976}
   - component: {fileID: 535710975}
   - component: {fileID: 535710974}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TachuelaAla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4128,7 +4143,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b002bf806f2143b4a95897cf50892652,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.438
+      value: 0.345
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b002bf806f2143b4a95897cf50892652,
         type: 3}
@@ -4138,7 +4153,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b002bf806f2143b4a95897cf50892652,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.6654243
+      value: 6.729
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b002bf806f2143b4a95897cf50892652,
         type: 3}
@@ -4532,7 +4547,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 714249605}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Orientaci\xF3n"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4563,7 +4578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 720914081}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Orientaci\xF3n"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4802,7 +4817,7 @@ GameObject:
   - component: {fileID: 791838622}
   - component: {fileID: 791838621}
   - component: {fileID: 791838624}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SocketLimon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4978,6 +4993,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: alfiler
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6a1bf9f6a2e17a342b5ef6256e0cc03d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a1bf9f6a2e17a342b5ef6256e0cc03d, type: 3}
 --- !u!4 &839990112 stripped
@@ -5053,6 +5073,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: alfiler
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6a1bf9f6a2e17a342b5ef6256e0cc03d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a1bf9f6a2e17a342b5ef6256e0cc03d, type: 3}
 --- !u!1 &938978449
@@ -5102,6 +5127,7 @@ MonoBehaviour:
   obj1: 0
   obj2: 0
   obj3: 0
+  audioSource: {fileID: 0}
 --- !u!1 &950683615
 GameObject:
   m_ObjectHideFlags: 0
@@ -5111,7 +5137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 950683616}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Orientaci\xF3n"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5142,7 +5168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 953286066}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pivote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5174,7 +5200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 964091883}
   - component: {fileID: 964091884}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SonidoVictoria
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5301,7 +5327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1034600066}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Orientaci\xF3n"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5335,7 +5361,7 @@ GameObject:
   - component: {fileID: 1037614651}
   - component: {fileID: 1037614650}
   - component: {fileID: 1037614653}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SocketGuana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5511,6 +5537,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: alfiler
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6a1bf9f6a2e17a342b5ef6256e0cc03d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a1bf9f6a2e17a342b5ef6256e0cc03d, type: 3}
 --- !u!4 &1070572431 stripped
@@ -5531,7 +5562,7 @@ GameObject:
   - component: {fileID: 1080862443}
   - component: {fileID: 1080862442}
   - component: {fileID: 1080862445}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SocketAlajuela
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5920,7 +5951,7 @@ GameObject:
   - component: {fileID: 1150299738}
   - component: {fileID: 1150299737}
   - component: {fileID: 1150299740}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SocketSanJose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6396,7 +6427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1306313845}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pivote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6494,7 +6525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1339759240}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Orientaci\xF3n"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6715,7 +6746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1366328092}
   - component: {fileID: 1366328091}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Puzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6770,7 +6801,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366328090}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.068792, y: -11.565958, z: 82.95444}
+  m_LocalPosition: {x: 12.989, y: -11.565958, z: 82.95444}
   m_LocalScale: {x: 1.2820513, y: 1.2820513, z: 1.2820513}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -6868,7 +6899,7 @@ GameObject:
   - component: {fileID: 1388449105}
   - component: {fileID: 1388449104}
   - component: {fileID: 1388449107}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SocketHeredia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6981,7 +7012,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1410879864}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pivote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7257,7 +7288,7 @@ GameObject:
   - component: {fileID: 1573246754}
   - component: {fileID: 1573246753}
   - component: {fileID: 1573246752}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TachuelaGua
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7526,7 +7557,7 @@ GameObject:
   - component: {fileID: 1655042150}
   - component: {fileID: 1655042149}
   - component: {fileID: 1655042152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SocketPuntarenas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7639,7 +7670,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1658422644}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Orientaci\xF3n"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7705,7 +7736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1717285946}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pivote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8542,7 +8573,7 @@ GameObject:
   - component: {fileID: 1770088393}
   - component: {fileID: 1770088392}
   - component: {fileID: 1770088391}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TachuelaCa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8937,7 +8968,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1852616964}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pivote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9099,7 +9130,7 @@ GameObject:
   - component: {fileID: 1941092119}
   - component: {fileID: 1941092118}
   - component: {fileID: 1941092117}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TachuelaSJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9286,7 +9317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2000077134}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pivote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9317,7 +9348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2026602554}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pivote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9411,6 +9442,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: alfiler
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6a1bf9f6a2e17a342b5ef6256e0cc03d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a1bf9f6a2e17a342b5ef6256e0cc03d, type: 3}
 --- !u!4 &2087021940 stripped
@@ -9428,7 +9464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2090788986}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Orientaci\xF3n"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9520,7 +9556,7 @@ GameObject:
   - component: {fileID: 2105051294}
   - component: {fileID: 2105051293}
   - component: {fileID: 2105051292}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TachuelaPunt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
