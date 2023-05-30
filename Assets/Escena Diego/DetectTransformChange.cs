@@ -63,32 +63,32 @@ public class DetectTransformChange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        posicionObjetivoA = baseA.transform.position;
-        rotacionObjetivoA = baseA.transform.rotation;
+        posicionObjetivoA = piezaA.transform.position;
+        rotacionObjetivoA = piezaA.transform.rotation;
 
-        posicionObjetivoB = baseB.transform.position;
-        rotacionObjetivoB = baseB.transform.rotation;
+        posicionObjetivoB = piezaB.transform.position;
+        rotacionObjetivoB = piezaB.transform.rotation;
 
-        posicionObjetivoC = baseC.transform.position;
-        rotacionObjetivoC = baseC.transform.rotation;
+        posicionObjetivoC = piezaC.transform.position;
+        rotacionObjetivoC = piezaC.transform.rotation;
 
-        posicionObjetivoD = baseD.transform.position;
-        rotacionObjetivoD = baseD.transform.rotation;
+        posicionObjetivoD = piezaD.transform.position;
+        rotacionObjetivoD = piezaD.transform.rotation;
 
-        posicionObjetivoE = baseE.transform.position;
-        rotacionObjetivoE = baseE.transform.rotation;
+        posicionObjetivoE = piezaE.transform.position;
+        rotacionObjetivoE = piezaE.transform.rotation;
 
-        posicionObjetivoF = baseF.transform.position;
-        rotacionObjetivoF = baseF.transform.rotation;
+        posicionObjetivoF = piezaF.transform.position;
+        rotacionObjetivoF = piezaF.transform.rotation;
 
-        posicionObjetivoG = baseG.transform.position;
-        rotacionObjetivoG = baseG.transform.rotation;
+        posicionObjetivoG = piezaG.transform.position;
+        rotacionObjetivoG = piezaG.transform.rotation;
 
-        posicionObjetivoH = baseH.transform.position;
-        rotacionObjetivoH = baseH.transform.rotation;
+        posicionObjetivoH = piezaH.transform.position;
+        rotacionObjetivoH = piezaH.transform.rotation;
 
-        posicionObjetivoI = baseI.transform.position;
-        rotacionObjetivoI = baseI.transform.rotation;
+        posicionObjetivoI = piezaI.transform.position;
+        rotacionObjetivoI = piezaI.transform.rotation;
     }
 
     // Update is called once per frame
@@ -121,15 +121,15 @@ public class DetectTransformChange : MonoBehaviour
       Vector3 posicionPI = piezaI.transform.position;
       Quaternion rotacionPI = piezaI.transform.rotation;
         if (
-          (posicionPA == posicionObjetivoA) & (rotacionPA == rotacionObjetivoA) &
-          (posicionPB == posicionObjetivoB) & (rotacionPB == rotacionObjetivoB) &
-          (posicionPC == posicionObjetivoC) & (rotacionPC == rotacionObjetivoC) &
-          (posicionPD == posicionObjetivoD) & (rotacionPD == rotacionObjetivoD) &
-          (posicionPE == posicionObjetivoE) & (rotacionPE == rotacionObjetivoE) &
-          (posicionPF == posicionObjetivoF) & (rotacionPF == rotacionObjetivoF) &
-          (posicionPG == posicionObjetivoG) & (rotacionPG == rotacionObjetivoG) &
-          (posicionPH == posicionObjetivoH) & (rotacionPH == rotacionObjetivoH) &
-          (posicionPI == posicionObjetivoI) & (rotacionPI == rotacionObjetivoI)
+          posicionPA == posicionObjetivoA && rotacionPA == rotacionObjetivoA &&
+          posicionPB == posicionObjetivoB && rotacionPB == rotacionObjetivoB &&
+          posicionPC == posicionObjetivoC && rotacionPC == rotacionObjetivoC &&
+          posicionPD == posicionObjetivoD && rotacionPD == rotacionObjetivoD &&
+          posicionPE == posicionObjetivoE && rotacionPE == rotacionObjetivoE &&
+          posicionPF == posicionObjetivoF && rotacionPF == rotacionObjetivoF &&
+          posicionPG == posicionObjetivoG && rotacionPG == rotacionObjetivoG &&
+          posicionPH == posicionObjetivoH && rotacionPH == rotacionObjetivoH &&
+          posicionPI == posicionObjetivoI && rotacionPI == rotacionObjetivoI
           )
         {
           Debug.Log("Exito!");
