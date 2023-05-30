@@ -94,11 +94,6 @@ public class DetectTransformChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OnTransformChanged();
-    }
-
-    void OnTransformChanged()
-    {
       Vector3 posicionPA = piezaA.transform.position;
       Quaternion rotacionPA = piezaA.transform.rotation;
 
@@ -137,8 +132,8 @@ public class DetectTransformChange : MonoBehaviour
           posicionPI == posicionObjetivoI && rotacionPI == rotacionObjetivoI
           )
         {
-            // Código de éxito.
-            //Debug.Log("Transform has changed!");
+          Debug.Log("Exito!");
+          this.enabled = false;
         }
     }
 }
