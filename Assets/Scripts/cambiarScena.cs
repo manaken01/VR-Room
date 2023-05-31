@@ -14,6 +14,6 @@ public class cambiarScena : MonoBehaviour
 
      IEnumerator cargarScena() {
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("Escena 1", LoadSceneMode.Single);
+        SceneManager.LoadScene("Escena Diego", LoadSceneMode.Single);
     }
 }
