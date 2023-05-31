@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DetectTransformChange : MonoBehaviour
 {
-
+    public AudioSource source;
+    public AudioClip clip;
     // Atributos encargados de la pieza A.
     public GameObject piezaA;
     public GameObject baseA;
@@ -132,6 +133,7 @@ public class DetectTransformChange : MonoBehaviour
           posicionPI == posicionObjetivoI && rotacionPI == rotacionObjetivoI
           )
         {
+          source.PlayOneShot(clip);
           Debug.Log("Exito!");
           this.enabled = false;
         }
