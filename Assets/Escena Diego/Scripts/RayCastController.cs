@@ -5,6 +5,7 @@ using UnityEngine;
 public class RayCastController : MonoBehaviour
 {
     public GameObject currentHitObject;
+    public float speed = 100f;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -20,6 +21,7 @@ public class RayCastController : MonoBehaviour
             if (Input.GetKey(KeyCode.X))
             {
               gameObject.transform.Rotate(new Vector3(0f, 0f, _rotatespeed) * Time.deltaTime, Space.World);
+              //StartCoroutine(Roll());
             }
             if (Input.GetKey(KeyCode.Y))
             {
@@ -31,5 +33,16 @@ public class RayCastController : MonoBehaviour
             }
           }
         }
+    }
+
+    IEnumerator Roll(){
+      float remainingAngle = 90;
+
+      while(remainingAngle > 0){
+        float rotationAngle = Time.deltaTime * speed;
+        transform.Rotate(rotationAngle, 0, 0);
+        remainingAngle -= rotationAngle;
+        yield return null;
+      }
     }
 }

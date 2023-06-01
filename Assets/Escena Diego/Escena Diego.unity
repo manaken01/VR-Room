@@ -868,17 +868,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2477334a47e1b85439cab3df3279625d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7199999
+      value: 2.0979998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2477334a47e1b85439cab3df3279625d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.45999998
+      value: 0.542
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2477334a47e1b85439cab3df3279625d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.25
+      value: 4.605
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2477334a47e1b85439cab3df3279625d,
         type: 3}
@@ -947,17 +947,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 354968f7c653ed6449a829a5af671515,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5799999
+      value: 1.958
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 354968f7c653ed6449a829a5af671515,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1899999
+      value: 1.272
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 354968f7c653ed6449a829a5af671515,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.25
+      value: 4.605
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 354968f7c653ed6449a829a5af671515,
         type: 3}
@@ -1225,6 +1225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHitObject: {fileID: 0}
+  speed: 300
 --- !u!1 &261731864 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ded222543e9848f4f81ea09e3f01e20d,
@@ -1398,6 +1399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHitObject: {fileID: 0}
+  speed: 300
 --- !u!1 &266440727 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ad51a68b3042d61469c588ac20fc5646,
@@ -1925,6 +1927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHitObject: {fileID: 0}
+  speed: 300
 --- !u!1 &331391983 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0abc5ce286dfec144821a999b917f55d,
@@ -2517,17 +2520,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2fbcc11e4c8fd92469abd7b4a79893e0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.85999995
+      value: 1.2379999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2fbcc11e4c8fd92469abd7b4a79893e0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.25
+      value: 1.332
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2fbcc11e4c8fd92469abd7b4a79893e0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.29
+      value: 4.645
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2fbcc11e4c8fd92469abd7b4a79893e0,
         type: 3}
@@ -3071,17 +3074,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: bbf25293332848140a69b3a6c1db394a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.99999994
+      value: 1.378
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bbf25293332848140a69b3a6c1db394a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.582
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bbf25293332848140a69b3a6c1db394a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.25
+      value: 4.605
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bbf25293332848140a69b3a6c1db394a,
         type: 3}
@@ -3529,6 +3532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHitObject: {fileID: 0}
+  speed: 300
 --- !u!1 &725339958
 GameObject:
   m_ObjectHideFlags: 0
@@ -5199,6 +5203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHitObject: {fileID: 0}
+  speed: 300
 --- !u!1001 &1163420682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5298,17 +5303,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 350778c48914fda478b79751aaf060c6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.42
+      value: 1.7980001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 350778c48914fda478b79751aaf060c6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.61
+      value: 0.69200003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 350778c48914fda478b79751aaf060c6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.25
+      value: 4.605
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 350778c48914fda478b79751aaf060c6,
         type: 3}
@@ -5377,17 +5382,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ddf7fee98db2b204f9661771d2897f26,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1999999
+      value: 1.578
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ddf7fee98db2b204f9661771d2897f26,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.02
+      value: 1.102
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ddf7fee98db2b204f9661771d2897f26,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.25
+      value: 4.605
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ddf7fee98db2b204f9661771d2897f26,
         type: 3}
@@ -5966,6 +5971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHitObject: {fileID: 0}
+  speed: 300
 --- !u!1001 &1401806059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6394,7 +6400,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ae45648ecc97a7f48994905ec38ba732,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.96999997
+      value: -3.6999998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae45648ecc97a7f48994905ec38ba732,
         type: 3}
@@ -6404,7 +6410,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ae45648ecc97a7f48994905ec38ba732,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.36
+      value: 5.715
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae45648ecc97a7f48994905ec38ba732,
         type: 3}
@@ -7357,6 +7363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHitObject: {fileID: 0}
+  speed: 300
 --- !u!1001 &1718132967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7456,7 +7463,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0abc5ce286dfec144821a999b917f55d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0abc5ce286dfec144821a999b917f55d,
         type: 3}
@@ -7841,8 +7848,9 @@ MonoBehaviour:
   m_HideControllerOnSelect: 0
   m_AllowHoveredActivate: 0
   m_TargetPriorityMode: 0
-  m_PlayAudioClipOnSelectEntered: 0
-  m_AudioClipForOnSelectEntered: {fileID: 0}
+  m_PlayAudioClipOnSelectEntered: 1
+  m_AudioClipForOnSelectEntered: {fileID: 8300000, guid: 8436c8cf5779f4fbda9ea5a4acee8d73,
+    type: 3}
   m_PlayAudioClipOnSelectExited: 0
   m_AudioClipForOnSelectExited: {fileID: 0}
   m_PlayAudioClipOnSelectCanceled: 0
@@ -7854,12 +7862,12 @@ MonoBehaviour:
   m_PlayAudioClipOnHoverCanceled: 0
   m_AudioClipForOnHoverCanceled: {fileID: 0}
   m_AllowHoverAudioWhileSelecting: 1
-  m_PlayHapticsOnSelectEntered: 1
-  m_HapticSelectEnterIntensity: 0.2
-  m_HapticSelectEnterDuration: 0.2
-  m_PlayHapticsOnSelectExited: 0
-  m_HapticSelectExitIntensity: 0
-  m_HapticSelectExitDuration: 0
+  m_PlayHapticsOnSelectEntered: 0
+  m_HapticSelectEnterIntensity: 0
+  m_HapticSelectEnterDuration: 0
+  m_PlayHapticsOnSelectExited: 1
+  m_HapticSelectExitIntensity: 0.2
+  m_HapticSelectExitDuration: 0.2
   m_PlayHapticsOnSelectCanceled: 0
   m_HapticSelectCancelIntensity: 0
   m_HapticSelectCancelDuration: 0
@@ -8032,17 +8040,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 934e99b6d66b4644dab61c72282935fd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.26
+      value: 1.638
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 934e99b6d66b4644dab61c72282935fd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.36
+      value: 1.442
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 934e99b6d66b4644dab61c72282935fd,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.25
+      value: 4.605
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 934e99b6d66b4644dab61c72282935fd,
         type: 3}
@@ -8101,7 +8109,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0abc5ce286dfec144821a999b917f55d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0abc5ce286dfec144821a999b917f55d,
         type: 3}
@@ -8402,6 +8410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHitObject: {fileID: 0}
+  speed: 300
 --- !u!1 &1915021796 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0abc5ce286dfec144821a999b917f55d,
@@ -8714,6 +8723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHitObject: {fileID: 0}
+  speed: 300
 --- !u!1001 &2047067324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8734,17 +8744,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ded222543e9848f4f81ea09e3f01e20d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.89
+      value: 1.2679999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ded222543e9848f4f81ea09e3f01e20d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.88
+      value: 0.962
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ded222543e9848f4f81ea09e3f01e20d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.25
+      value: 4.605
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ded222543e9848f4f81ea09e3f01e20d,
         type: 3}
@@ -9084,8 +9094,9 @@ MonoBehaviour:
   m_HideControllerOnSelect: 0
   m_AllowHoveredActivate: 0
   m_TargetPriorityMode: 0
-  m_PlayAudioClipOnSelectEntered: 0
-  m_AudioClipForOnSelectEntered: {fileID: 0}
+  m_PlayAudioClipOnSelectEntered: 1
+  m_AudioClipForOnSelectEntered: {fileID: 8300000, guid: 8436c8cf5779f4fbda9ea5a4acee8d73,
+    type: 3}
   m_PlayAudioClipOnSelectExited: 0
   m_AudioClipForOnSelectExited: {fileID: 0}
   m_PlayAudioClipOnSelectCanceled: 0
@@ -9097,12 +9108,12 @@ MonoBehaviour:
   m_PlayAudioClipOnHoverCanceled: 0
   m_AudioClipForOnHoverCanceled: {fileID: 0}
   m_AllowHoverAudioWhileSelecting: 1
-  m_PlayHapticsOnSelectEntered: 1
-  m_HapticSelectEnterIntensity: 0.2
-  m_HapticSelectEnterDuration: 0.2
-  m_PlayHapticsOnSelectExited: 0
-  m_HapticSelectExitIntensity: 0
-  m_HapticSelectExitDuration: 0
+  m_PlayHapticsOnSelectEntered: 0
+  m_HapticSelectEnterIntensity: 0
+  m_HapticSelectEnterDuration: 0
+  m_PlayHapticsOnSelectExited: 1
+  m_HapticSelectExitIntensity: 0.2
+  m_HapticSelectExitDuration: 0.2
   m_PlayHapticsOnSelectCanceled: 0
   m_HapticSelectCancelIntensity: 0
   m_HapticSelectCancelDuration: 0
