@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DetectTransformChange : MonoBehaviour
 {
@@ -137,8 +138,14 @@ public class DetectTransformChange : MonoBehaviour
           )
         {
           source.PlayOneShot(clip);
+          StartCoroutine(cargarScena());
           Debug.Log("Exito!");
           this.enabled = false;
         }
+    }
+
+    IEnumerator cargarScena() {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Escena final", LoadSceneMode.Single);
     }
 }
