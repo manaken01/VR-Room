@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: "Assets/Scenes/Men\xFA Inicial.unity"
+    guid: da1159ee46c600545a1aea3f95a55ac9
   - enabled: 1
     path: Assets/Scenes/Escena 1.unity
     guid: eee8dda9961e5224db043c770a99851a
@@ -17,12 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Escena 3.unity
     guid: 8e134fe5e77371046aeb7c53b4803ea2
-  - enabled: 0
-    path: Assets/Escena Diego/Pruebas.unity
-    guid: 3221c5d9903e8794db7119a9490668c3
   - enabled: 1
     path: Assets/Escena Diego/Escena Diego.unity
     guid: 0f30b30349e3c084ea0c8ed328b33c5d
+  - enabled: 1
+    path: Assets/Scenes/Escena final.unity
+    guid: a3c13eea69b417e4c9156ee4fb568fd7
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ed72be55522c8448bae8b0d66fa21adf,
       type: 2}
