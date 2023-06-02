@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - atomo
+  - Trail
+  - Box
   layers:
   - Default
   - TransparentFX

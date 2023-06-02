@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _info: "\xBFCu\xE1nto es 8x6?"
   _answers:
-  - _info: a)    36
+  - _info: 48
     _isCorrect: 1
   - _info: b)   26
     _isCorrect: 0

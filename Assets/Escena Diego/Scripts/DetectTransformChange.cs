@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class DetectTransformChange : MonoBehaviour
 {
     public AudioSource source;
+    public AudioSource source2;
     public AudioClip clip;
     // Atributos encargados de la pieza A.
     public GameObject piezaA;
@@ -153,14 +154,15 @@ public class DetectTransformChange : MonoBehaviour
           )
         {
           source.PlayOneShot(clip);
-          StartCoroutine(cargarScena());
           Debug.Log("Exito!");
           this.enabled = false;
+          StartCoroutine(cargarScena());
         }
     }
 
     IEnumerator cargarScena() {
         yield return new WaitForSeconds(2);
+        source2.mute = true;
         SceneManager.LoadScene("Escena final", LoadSceneMode.Single);
     }
 }
