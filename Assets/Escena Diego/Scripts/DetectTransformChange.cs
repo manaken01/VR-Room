@@ -125,6 +125,8 @@ public class DetectTransformChange : MonoBehaviour
 
       Vector3 posicionPI = piezaI.transform.position;
       Quaternion rotacionPI = piezaI.transform.rotation;
+        
+        /*
         if (
           posicionPA == posicionObjetivoA && rotacionPA == rotacionObjetivoA &&
           posicionPB == posicionObjetivoB && rotacionPB == rotacionObjetivoB &&
@@ -135,6 +137,19 @@ public class DetectTransformChange : MonoBehaviour
           posicionPG == posicionObjetivoG && rotacionPG == rotacionObjetivoG &&
           posicionPH == posicionObjetivoH && rotacionPH == rotacionObjetivoH &&
           posicionPI == posicionObjetivoI && rotacionPI == rotacionObjetivoI
+          )
+        */
+        
+        if (
+          posicionPA == posicionObjetivoA &&
+          posicionPB == posicionObjetivoB &&
+          posicionPC == posicionObjetivoC &&
+          posicionPD == posicionObjetivoD &&
+          posicionPE == posicionObjetivoE &&
+          posicionPF == posicionObjetivoF &&
+          posicionPG == posicionObjetivoG &&
+          posicionPH == posicionObjetivoH &&
+          posicionPI == posicionObjetivoI
           )
         {
           source.PlayOneShot(clip);
