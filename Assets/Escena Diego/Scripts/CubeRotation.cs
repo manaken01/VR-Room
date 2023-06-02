@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CubeRotation : MonoBehaviour
 {
-    public float RoatitionSpeed = 20f;
+    public float RoatitionSpeed = 100f;
 
     private static int SnapRot;
 
@@ -32,33 +32,22 @@ public class CubeRotation : MonoBehaviour
     private void Update()
     {
         // thunbstick rotation....
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.X))
         {
             transform.Rotate(Vector3.up * -RoatitionSpeed * Time.deltaTime, Space.World);
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.Rotate(Vector3.up * RoatitionSpeed * Time.deltaTime, Space.World);
-        }
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.Y))
         {
             transform.Rotate(Vector3.right * RoatitionSpeed * Time.deltaTime, Space.World);
         }
-        else if (Input.GetKey(KeyCode.DownArrow))
+        
+        if (Input.GetKey(KeyCode.Z))
         {
-            transform.Rotate(Vector3.right * -RoatitionSpeed * Time.deltaTime, Space.World);
+            transform.Rotate(Vector3.forward * -RoatitionSpeed * Time.deltaTime, Space.World);
         }
 
-        // snap rotation
-        SnapRot = 1; // Cambia esto según tus necesidades o elimínalo si no lo necesitas
-
-        if (SnapRot == 1)
-        {
-            Vector3 alignedForward = NearestWorldAxis(transform.forward);
-            Vector3 alignedUp = NearestWorldAxis(transform.up);
-            transform.rotation = Quaternion.LookRotation(alignedForward, alignedUp);
-        }
+        
     }
 
     public void res()

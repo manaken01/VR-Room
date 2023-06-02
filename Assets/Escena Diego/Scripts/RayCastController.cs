@@ -21,15 +21,18 @@ public class RayCastController : MonoBehaviour
             if (Input.GetKey(KeyCode.X))
             {
               gameObject.transform.Rotate(new Vector3(0f, 0f, _rotatespeed) * Time.deltaTime, Space.World);
+              //gameObject.transform.Rotate(Vector3.up * -RoatitionSpeed * Time.deltaTime, Space.World);
               //StartCoroutine(Roll());
             }
             if (Input.GetKey(KeyCode.Y))
             {
               gameObject.transform.Rotate(new Vector3(0f, _rotatespeed, 0f) * Time.deltaTime, Space.World);
+              //gameObject.transform.Rotate(Vector3.right * RoatitionSpeed * Time.deltaTime, Space.World);
             }
             if (Input.GetKey(KeyCode.Z))
             {
               gameObject.transform.Rotate(new Vector3(_rotatespeed, 0f, 0f) * Time.deltaTime, Space.World);
+              //gameObject.transform.Rotate(Vector3.forward * -RoatitionSpeed * Time.deltaTime, Space.World);
             }
           }
         }
